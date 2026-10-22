@@ -1,0 +1,11 @@
+﻿result_id,manuscript_location,claim,archive_paths,reproduction_subcommands
+R1,3.3、图2,任务、条件与共享初始产物,benchmark/requirements; benchmark/reference_models/manifest.json; experiments/conditions.csv; experiments/shared_initial; experiments/endpoint_index.csv,verify
+R2,4.1—4.2、图3—4、表2—3,固定六轮计数、区间及双向不一致,experiments/endpoint_index.csv; data/新增实验统计/marginal_rates.csv; data/新增实验统计/paired_fixed_conditions.csv,score; sensitivity; statistics
+R3,4.3、6.3、图5,行为源码差异、2646目标及变化案例,data/统一主数据/N04_360次前后轨迹逐点比较.csv; data/统一主数据/N05_2646目标前后比较.csv; data/统一主数据/N09_六架构合同与行为四格.csv; data/技术核查; documentation/detailed_analysis_legacy.md,score
+R4,4.4、5.3,历史21条件、20项消融、早停与重测,data/统计表/01_全部21条件汇总.csv; data/统计表/02_全部20项配对比较.csv; data/统一主数据/U03_4656个实际轮次.csv; experiments/historical_21_conditions; experiments/checkpoint_index.csv,score; statistics
+R5,3.6、4.5、图6、表4,调用、Token、费用、时间、缺失、异常与重试,resources; data/统一主数据/N02_新增角色资源.csv; data/统一主数据/N15_新增资源及重试统一汇总.csv,resources
+R6,4.3、5.1,确定性覆盖及31模型互斥组合,resources/deterministic_rule_checks.csv; data/统一主数据/N11_确定性31差异冲突组合.csv; data/统一主数据/N12_确定性规则覆盖.csv,sensitivity
+R7,5.2—5.3、图7—8、表5,3240端点、27条件敏感性及配对,data/审计统计/S01_3240端点原规则与移除fixed检查.csv; data/审计统计/S02_全部27条件的统一规则敏感性.csv; data/审计统计/S03_24项统一调整规则配对比较.csv,score; sensitivity; statistics
+R8,5.4、图9,25模型、41变量及5/20分类,initialization_audit/audit_25_models.csv; initialization_audit/evidence,audit
+R9,5.5、图10,C1/C3完整初始化证据链,initialization_audit/evidence/fixed_deterministic__r01__C1; initialization_audit/evidence/fixed_deterministic__r02__C3,audit
+R10,3.5、3.7、式3,NRMSE与69项锁定哈希差异,evaluation/original_acceptance/experiment_metrics.py; provenance/locked_input_audit.json; provenance/NRMSE_definition_audit.json,verify; score

@@ -1,0 +1,57 @@
+{
+  "verdict": "PASS",
+  "files": [
+    {
+      "path_workspace_relative": "experiment_metrics.py",
+      "sha256": "de34f54222c2ae90ebabe4f2a378a4ddd4e887a88e78eac82d572e40ce2d5c0e"
+    },
+    {
+      "path_workspace_relative": "supplement_v2_20261018\\runtime\\experiment_metrics.py",
+      "sha256": "de34f54222c2ae90ebabe4f2a378a4ddd4e887a88e78eac82d572e40ce2d5c0e"
+    },
+    {
+      "path_workspace_relative": "supplement_v2_20261018\\source_snapshot\\experiment_metrics.py",
+      "sha256": "de34f54222c2ae90ebabe4f2a378a4ddd4e887a88e78eac82d572e40ce2d5c0e"
+    },
+    {
+      "path_workspace_relative": "IST_无独立补充材料版_20261022\\IST-Modelica-Replication\\evaluation\\original_acceptance\\experiment_metrics.py",
+      "sha256": "de34f54222c2ae90ebabe4f2a378a4ddd4e887a88e78eac82d572e40ce2d5c0e"
+    }
+  ],
+  "function": "nrmse_against_reference",
+  "function_lines": [
+    235,
+    334
+  ],
+  "denominator_code": "max(max(ref_y) - min(ref_y), max(abs(v) for v in ref_y), 1e-12)",
+  "reference_support": "complete reference series after duplicate event-time coalescing, not only the common-grid overlap",
+  "rmse_support": "union of candidate/reference sample times in their overlap, plus overlap endpoints, linearly interpolated",
+  "required_coverage": 0.999,
+  "max_nrmse_limit": 0.05,
+  "threshold_task_specific": false,
+  "guard": 1e-12,
+  "historical_and_controlled_code_byte_identical": true,
+  "sensitivity": "removes source fixed flag only; retains archived NRMSE, guard and threshold unchanged",
+  "archived_examples": [
+    {
+      "model": "NewtonCooling",
+      "variable": "T",
+      "archived_reference_scale": 100.0,
+      "archived_nrmse": 0.0
+    },
+    {
+      "model": "SpringMassDamper",
+      "variable": "omega_n",
+      "archived_reference_scale": 10.0,
+      "archived_nrmse": 0.0
+    },
+    {
+      "model": "SpringMassDamper",
+      "variable": "zeta",
+      "archived_reference_scale": 0.1,
+      "archived_nrmse": 0.0
+    }
+  ],
+  "manuscript": "v1 maximum-of-three definition agrees with code; earlier range-only explanatory prose is incomplete; v2 OMML uses infinity norm with full reference support defined",
+  "data_changed": false
+}
